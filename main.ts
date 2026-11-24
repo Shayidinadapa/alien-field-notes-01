@@ -24,6 +24,11 @@ if (ENTRY_TEXT.trim().length === 0) {
 if (ENTRY_TEXT.includes("\n") || ENTRY_TEXT.includes("\r")) {
   throw new Error("entry must be a single line");
 }
+if (/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(ENTRY_TEXT)) {
+  throw new Error(
+    "entry must not contain control characters (only printable text allowed)",
+  );
+}
 
 mkdirSync(outputDir, { recursive: true });
 const target = join(outputDir, "entry.txt");
