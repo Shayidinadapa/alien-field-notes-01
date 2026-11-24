@@ -1,0 +1,1 @@
+{"description":"One-line alien tourist review of planet Earth, written to /output/entry.txt for make.fun's Alien Field Notes bounty.","engines":{"node":">=22.6"},"license":"MIT","name":"alien-field-notes-01","scripts":{"start":"node main.ts"},"type":"module","version":"1.0.0"}
